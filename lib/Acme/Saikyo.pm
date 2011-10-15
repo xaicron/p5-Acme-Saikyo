@@ -2,8 +2,22 @@ package Acme::Saikyo;
 
 use strict;
 use warnings;
+use utf8;
 use 5.008_001;
 our $VERSION = '0.01';
+use parent 'Exporter';
+
+our @EXPORT = 'saikyo';
+
+sub import {
+    utf8->import;
+    __PACKAGE__->export_to_level(1, @_);
+}
+
+sub saikyo {
+    my $stuff = shift;
+    sprintf "ぼくのかんがえたさいきょうの%s", $stuff;
+}
 
 1;
 __END__
@@ -14,15 +28,17 @@ __END__
 
 =head1 NAME
 
-Acme::Saikyo -
+Acme::Saikyo - ぼくがかんがえたさいきょうの「ぼくがかんがえたさいきょうの○○」をしゅつりょくするもじゅーる
 
 =head1 SYNOPSIS
 
   use Acme::Saikyo;
 
+  say saikyo '「ぼくがかんがえたさいきょうの○○」をしゅつりょくするもじゅーる';
+
 =head1 DESCRIPTION
 
-Acme::Saikyo is
+Acme::Saikyo is さいきょうのもじゅーる
 
 =head1 AUTHOR
 
