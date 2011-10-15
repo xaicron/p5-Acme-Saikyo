@@ -1,0 +1,30 @@
+This is Perl module Acme::Saikyo.
+
+INSTALLATION
+
+Acme::Saikyo installation is straightforward. If your CPAN shell is set up,
+you should just be able to do
+
+    % cpan Acme::Saikyo
+or
+
+    % cpanm Acme::Saikyo
+
+Download it, unpack it, then build it as per the usual:
+
+    % perl Makefile.PL
+    % make && make test
+
+Then install it:
+
+    % make install
+
+DOCUMENTATION
+
+Acme::Saikyo documentation is available as in POD. So you can do:
+
+    % perldoc Acme::Saikyo
+
+to read the documentation online with your favorite pager.
+
+xaicron
